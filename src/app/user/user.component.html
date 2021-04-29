@@ -1,0 +1,5 @@
+<p>The Current User is : {{userName}}</p>
+
+<label>change username</label>
+<input style="margin:5px" type="text" [(ngModel)]="newUserName" (input)="checkUserName()">
+<button class="btn btn-primary" [disabled]="newuserNameEmpty" (click)="updateUsreName()">Update UserName</button>

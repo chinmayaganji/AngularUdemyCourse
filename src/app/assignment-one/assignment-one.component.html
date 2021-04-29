@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="changeButtonText()">{{buttonText}}</button>
+<p *ngIf="isSecure == false">Your Password is : {{ password}}</p>
+
+<p *ngFor="let click of buttonClickLog; let index=index ">
+   <label *ngIf="index %2==0">viewed password at</label>
+    <label *ngIf="index %2!=0">Password Hidden at</label>
+    <label *ngIf="index <4">{{click}}</label>
+    <label *ngIf="index >=4" ngClass="txt-white" [ngStyle]="{backgroundColor:'blue'}"> {{click}} </label>
+</p>
